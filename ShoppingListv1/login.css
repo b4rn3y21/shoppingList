@@ -1,0 +1,60 @@
+body {
+	color: white;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+
+
+h1{
+	
+}
+
+h2 {
+	color: white;
+	font-size: 5em;
+}
+
+label {
+	display: none;
+}
+
+input {
+	border: 40px outset skyblue;
+}
+
+p {
+	font-size: 2.1em;
+}
+
+.showInput label{
+	display: inline-block;
+	font-size: 4em;
+	vertical-align: middle;
+}
+
+input[type="radio"] {
+	height: 100px;
+	width: 100px;
+	vertical-align: middle;
+	margin-right: 120px;
+	color: green;
+	box-shadow: none;
+	outline: none;
+	
+}
+
+#haveAccount {
+	margin-bottom: 100px;
+}
+
+#haveAccount a {
+	text-decoration: none;
+}
+
+.help-block {
+	display: block;
+	color: red;
+	font-weight: bold;
+}
+
