@@ -1,0 +1,225 @@
+body {
+	min-height: 100vh;
+}
+
+ul {
+	padding-top: 0;
+}
+
+.identifier {
+	display: none;
+}
+
+form {
+	text-align: center;
+}
+
+form button {
+	padding: 0px 0px;
+	text-align: center;
+	border: 40px outset green;
+	border-radius: 200px;
+	margin: 10px auto 40px;
+	width: 80%;
+	box-shadow: 5px 10px 8px;
+	font-size: 2em;
+	text-align-last:center;
+}
+
+#showList {
+	margin: 20px auto;
+	padding-bottom: 50px;
+
+}
+
+#listSelect {
+	text-align: center
+	padding: 20px 0px;
+	text-align: center;
+	border: 40px outset green;
+	border-radius: 200px;
+	margin: 30px auto;
+	width: 80%;
+	box-shadow: 5px 10px 8px;
+	background-color: white;
+}
+
+#listSelect label {
+	display: none;
+}
+
+#listSelect option {
+	font-size: .3em;
+
+}
+
+#listSelector {
+	font-size: 5em;
+	text-align: center;
+}
+
+#listselector option {
+	text-align: center;
+}
+
+#itemsToAdd {
+	font-size: 2em;
+	margin: 170px auto 0px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+  	grid-template-rows: auto auto auto;
+  	grid-template-areas: 
+    	
+    	"item item"
+    	"quantity go"
+    	"err err"
+    	;
+    text-align: center;
+    min-height: 500px;
+}
+
+	#itemToAddDiv {
+		grid-area: item;
+	}
+
+	#itemToAddDiv input{
+		width: 90%;
+		margin:auto;
+	}
+
+	#quantityToAddDiv {
+		grid-area: quantity;
+		width: 80%;
+		margin: auto;
+	}
+
+	#addItemButton {
+		grid-area: go;
+		width: 80%;
+		margin: auto;
+		padding: 7px;
+	}
+
+	#addItemErr {
+		grid-area: err;
+		color: red;
+	}
+
+#itemsToAdd label {
+	display: none;
+}
+
+#itemsToAdd input {
+	//display: block;
+	margin: auto;
+	font-size: 2em;
+}
+
+#itemToAddautocomplete-list {
+	text-align: center;
+	margin: auto;
+}
+
+#itemToAddautocomplete-list div {
+	border: 1px solid yellow;
+	border-radius: 200px;
+	background-color: #ffff66;
+	width: 70%;
+	font-size: 1.7em;
+	margin: 10px auto;
+}
+
+#itemDiv {
+	margin: auto;
+}
+
+.deletebtn {
+	
+}
+
+.editbtn {
+
+}
+
+.listItemDiv {
+	color: white;
+	display: grid;
+	grid-template-columns: 52% 31% 17%;
+  	grid-template-rows: auto;
+  	grid-template-areas: 
+    	
+    	"item quantity delete"
+    	;
+
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	width: 95%;
+	font-size: 40px;
+	margin: 20px auto;
+	height: 90px;
+}
+
+.addListPK {
+	display: none;
+}
+
+.addListItem {
+	grid-area: item;
+	font-size: 1.8em;
+	overflow-x: scroll;
+}
+
+.addListQuantity {
+	grid-area: quantity;
+	display: grid;
+	grid-template-columns:  35% 30% 35%;
+  	grid-template-areas: 
+    	
+    	" dec num inc "
+    	;
+    font-size: 1.8em;
+}
+
+	.decreasebtn {
+		grid-area: dec;
+
+	}
+		
+	.quantityNumber {
+		grid-area: num;
+		padding-top: 12px;
+	}
+
+	.increasebtn {
+		grid-area: inc;
+		/*border: 1px solid green;
+		border-radius: 200px;
+		background-color: green;*/
+	}
+
+.deletebtn {
+	grid-area: delete;
+	/*border: 1px solid red;
+	border-radius: 200px;
+	background-color: red;*/
+	width: 50%;
+	font-size: 1.4em;
+	justify-self: center;
+	position: relative;
+}
+
+.deletebtn p {
+	margin: 0;
+	position: absolute;
+	top: 10px;
+	left:23px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+	body {
+		font-size: .4em;
+	}
+
+}
