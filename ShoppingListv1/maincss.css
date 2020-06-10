@@ -1,0 +1,301 @@
+body {
+	background: linear-gradient(to bottom right, #1D1F20 50%, #AAABAA);
+	min-height: 95vh;
+}
+
+.bodyWrapper {
+	min-height: 85vh;
+	margin: 0 0 50px 0;
+}
+
+/* For burger barv viewList and addToList*/
+.menuToggle {
+	color: white;
+	font-size: 90px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	text-decoration: none;
+}
+
+.hidden {
+	display: none;
+}
+
+
+h1 {
+	text-align: center;
+	color: white;
+	width: 90%;
+	margin: 100px auto;
+	text-decoration: underline;
+	letter-spacing: 2px;
+	font-size: 7em;
+}
+
+header{
+	margin-top: 4vh;
+}
+
+ul{
+	list-style-type: none;
+	padding: 130px 0 0 0;
+
+}
+
+ul li {
+	left: 50%;
+	padding: 15px 0px;
+	text-align: center;
+	border: 10px solid green;
+	border-radius: 15px;
+	margin: 2vh auto;
+	width: 90%;
+	box-shadow: 5px 10px 8px;
+	background-color: white;
+}
+
+ul li a {
+
+	text-decoration: none;
+	font-size: 6em;
+	width: 50%;
+	color: black;
+
+}
+
+form label, .btn{
+	color: white;
+}
+
+form input, .btn {
+	padding: 20px 0px;
+	text-align: center;
+	border: 40px outset #004680;
+	border-radius: 200px;
+	margin: 30px auto;
+	width: 80%;
+	box-shadow: 5px 10px 8px;
+	font-size: 4em;
+	text-align-last:center;
+}
+
+form input [type = "submit"], .btn{
+	border: 40px outset green;
+}
+
+form input[type = "reset"] {
+	border: 40px outset green;
+}
+
+form input:focus { 
+	outline: 0;
+}
+
+button {
+	
+}
+
+select {
+	
+}
+
+footer {
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-size: 2em;
+	height: 50px;
+	padding:  0;
+}
+
+footer p {
+	color: white;
+	font-size: 1em;
+}
+
+/* animation for blinking cursor in input spaces*/
+.cursor {
+	position: relative;
+}
+.cursor	i {
+	position: absolute;
+	width: 5px;
+	height: 80%;
+	background-color: gray;
+	left: 50%;
+	top: 10%;
+	animation-name: blink;
+	animation-duration: 800ms;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+
+.cursor input:focus + i {
+	display: none;
+}
+
+.wrapper {
+	min-height: 100vh;
+	margin: 0 auto -100px;
+}
+
+
+
+@keyframes blink {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+/*Settings panel CSS*/
+#settingsPanel {
+	position: fixed; /* Sit on top of the page content */
+	width: 92%; /* Full width (cover the whole page) */
+	min-height: 92%; /* Full height (cover the whole page) */
+	top: 4%;
+	left: 4%;
+	background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+	border: 7px solid white;
+	border-radius: 15px;
+	text-align: center;
+
+}
+
+#exit {
+	position: fixed;
+	right:3%;
+	top: 4%;
+	height: 102px;
+	width: 102px;
+	color: red;
+	font-size: 4.5em;
+	background-color: white;
+	text-align: center;
+	border-radius: 15px;
+}
+
+#settingsHeader {
+	color: white;
+	font-size: 5em;
+}
+
+#settingsContainer {
+	position: absolute;
+	height: 67%;
+	overflow: scroll;
+}
+
+.settingDiv {
+	color: white;
+	min-height: 350px;
+	display: grid;
+	grid-template-columns: 70% 30%;
+  	grid-template-rows: 30% 70%;
+  	grid-template-areas: 
+    	
+    	"title title"
+    	"desc toggle"
+    	;
+    border:1px solid white;
+    margin: auto;
+    width: 95%;
+    background-color: darkgrey;
+    vertical-align: middle;
+    margin: 10px auto;
+}
+
+.settingDiv div{
+	padding-top: 20px;
+	 vertical-align: middle;
+}
+
+.settingDiv p {
+	margin-block-start:0;
+    margin-block-end: 0;
+
+}
+
+.settingTitle {
+	grid-area: title;
+	font-size: 4em
+}
+
+.settingDesc {
+	grid-area: desc;
+	font-size: 3em;
+}
+
+.settingSwitch {
+
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  left: 15%;
+  top: 18%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+	height: 100px;
+	width: 180px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: green;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 100px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 75px;
+  width: 65px;
+  left: 4%;
+  bottom: 12%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 80px;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  transform: translateX(100px);
+}
+
+#savebtn {
+	position: absolute;
+	bottom: 15px;
+	left: 5%;
+	height: 4%;
+
+}
